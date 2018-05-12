@@ -4,6 +4,13 @@
 # use local = TRUE argument to load in new data files on the server
 # see reference for session handling on shiny server here: http://shiny.rstudio.com/articles/scoping.html
 source("dependencies_joined_data.R", local = TRUE)
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load("shiny","readxl","ggplot2","readr")
+
+library(shiny)
+library(readxl)
+library(ggplot2)
+library(readr)
 
 # begin shiny here
 shinyServer(function(input, output) {
